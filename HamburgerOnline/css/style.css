@@ -1,0 +1,284 @@
+/* Root CSS variables */
+:root{
+    --Primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rbga(104, 104, 104, 0.8);
+    --btnbackground: rgb(255, 188, 13);
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--dark);
+}
+
+body{
+    background: #fff;
+    margin: 20px 40px;
+    line-height: 1.5;
+}
+
+.btn {
+    background: var(--btnbackground);
+    color: var(--dark);
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    cursor:pointer;
+    border: 0;
+}
+
+
+img{
+    max-width: 100%;
+}
+
+.wrapper{
+    display: grid;
+    row-gap: 20px;
+}
+
+/* Navigation */
+.main-nav ul{
+    display: grid;
+    row-gap: 10px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.main-nav a{
+    background: var(--primary);
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    color: var(--dark);
+    text-transform: uppercase;
+    font-size: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.main-nav a:hover {
+    background: var(--dark);
+    color: var(--light);
+}
+
+/* Top Container */
+.top-container{
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-areas: 
+    'showcase showcase top-box-a'
+    'showcase showcase top-box-b';
+}
+
+.top-container-page2{
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-areas: 
+    'showcase-page2 contact'
+    'showcase-page2 contact';
+}
+
+/* Showcase */
+.showcase{
+    grid-area: showcase;
+    min-height: 400px;
+    background: url(/Index/img/Hamburger-2.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.showcase-page2{
+    grid-area: showcase-page2;
+    min-height: 400px;
+    background: url(/Contact/img/Contact-us.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.showcase h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    color: var(--light);
+}
+
+.showcase p {
+    font-size: 1.3rem;
+    margin-top: 0;
+    color: var(--light);
+}
+
+.top-box{
+    background: var(--Primary);
+    display: grid;
+    text-align: center;
+    align-items: center;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.top-box-a{
+    grid-area: top-box-a;
+    min-height: 200px;
+    background: url(/Index/img/Sustainability.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    color: var(--light);
+    font-size: 1rem;
+}
+
+.top-box-b{
+    grid-area: top-box-b;
+    min-height: 200px;
+    background: url(/Index/img/Food-delivery.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    color: var(--light);
+    font-size: 1rem;
+}
+
+
+/* boxes */
+
+
+.boxes{
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+
+.box{
+    background: var(--Primary);
+    text-align: center;
+    padding: 1rem 2rem;
+    box-shadow: var(--shadow);
+}
+
+footer{
+    margin-top: 1rem;
+    background: var(--dark);
+    color: var(--light);
+    text-align: center;
+    padding: 0.5rem;
+
+}
+
+ /* Style inputs with type="text", select elements and textareas */
+ input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container-page2 {
+    display: grid;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  } 
+
+/* Media Queries */
+@media(max-width: 700px){
+    .top-container{
+        grid-template-areas: 
+        'showcase showcase'
+        'top-box-a top-box-b';
+    }
+
+    .showcase h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-nav ul{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media(max-width: 500px){
+    .top-container{
+        grid-template-areas: 
+        'showcase'
+        'top-box-a'
+        'top-box-b';
+    }
+}
+
+/* Media Queries Contact*/
+@media(max-width: 700px){
+    .top-container-page2{
+        grid-template-areas: 
+        'showcase-page2' 
+        'container-page2';
+    }
+
+    .showcase-page2 h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-nav ul{
+        grid-template-columns: 1fr;
+    }
+    @media(max-width: 500px){
+        .top-container-page2{
+            grid-template-areas: 
+            'showcase-page2'
+            'container-page2'
+        }
+    }
+}
+
